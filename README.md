@@ -41,3 +41,20 @@ The goal is to demonstrate the application of machine learning, backend APIs, fr
 1. Install dependencies  
 ```bash
 py -m pip install -r requirements.txt
+
+## ▶️ How to Run (Windows)
+
+1. Install dependencies
+   py -m pip install -r requirements.txt
+
+2. Place dataset
+   data/StudentsPerformance.csv
+
+3. Train model
+   py ml/train_model.py
+
+4. Start backend
+   py -m backend.app
+
+5. Open frontend
+   frontend/index.html
