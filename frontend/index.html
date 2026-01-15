@@ -1,8 +1,57 @@
 <!DOCTYPE html>
-<html>
-<head><meta charset="utf-8"><title>Student Performance Prediction</title></head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Performance Prediction</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 <body>
-  <h1>Student Performance Prediction</h1>
-  <p>TODO: Member 3 will build the frontend UI.</p>
+
+  <div class="container">
+    <h1>Student Performance Prediction</h1>
+
+    <label>Gender</label>
+    <select id="gender">
+      <option value="female">Female</option>
+      <option value="male">Male</option>
+    </select>
+
+    <label>Race / Ethnicity</label>
+    <select id="race">
+      <option value="group A">Group A</option>
+      <option value="group B">Group B</option>
+      <option value="group C">Group C</option>
+      <option value="group D">Group D</option>
+      <option value="group E">Group E</option>
+    </select>
+
+    <label>Parental Level of Education</label>
+    <select id="education">
+      <option value="bachelor's degree">Bachelor's Degree</option>
+      <option value="some college">Some College</option>
+      <option value="master's degree">Master's Degree</option>
+      <option value="associate's degree">Associate's Degree</option>
+      <option value="high school">High School</option>
+      <option value="some high school">Some High School</option>
+    </select>
+
+    <label>Lunch</label>
+    <select id="lunch">
+      <option value="standard">Standard</option>
+      <option value="free/reduced">Free / Reduced</option>
+    </select>
+
+    <label>Test Preparation Course</label>
+    <select id="prep">
+      <option value="none">None</option>
+      <option value="completed">Completed</option>
+    </select>
+
+    <button onclick="predict()">Predict</button>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
