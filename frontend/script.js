@@ -1,7 +1,6 @@
 function predict() {
   const data = {
     "gender": document.getElementById("gender").value,
-    "race/ethnicity": document.getElementById("race").value,
     "parental level of education": document.getElementById("education").value,
     "lunch": document.getElementById("lunch").value,
     "test preparation course": document.getElementById("prep").value
