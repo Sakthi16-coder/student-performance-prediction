@@ -2,46 +2,109 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Student Performance Prediction</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <div class="bg">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">SP</div>
+        <div>
+          <h1>Student Performance Predictor</h1>
+          <p class="subtitle">Predict expected performance level from student background</p>
+        </div>
+      </div>
+      <div class="chip">Flask API • ML Model</div>
+    </header>
 
-  <div class="container">
-    <h1>Student Performance Prediction</h1>
+    <main class="layout">
+      <section class="card">
+        <h2>Student Details</h2>
+        <p class="muted">Fill in the inputs, then click Predict.</p>
 
-    <label>Gender</label>
-    <select id="gender">
-      <option value="female">Female</option>
-      <option value="male">Male</option>
-    </select>
+        <div class="grid">
+          <div class="field">
+            <label for="gender">Gender</label>
+            <select id="gender">
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+            </select>
+          </div>
 
+          <div class="field">
+            <label for="race">Race / Ethnicity</label>
+            <select id="race">
+              <option value="group A">Group A</option>
+              <option value="group B">Group B</option>
+              <option value="group C" selected>Group C</option>
+              <option value="group D">Group D</option>
+              <option value="group E">Group E</option>
+            </select>
+          </div>
 
-    <label>Parental Level of Education</label>
-    <select id="education">
-      <option value="bachelor's degree">Bachelor's Degree</option>
-      <option value="some college">Some College</option>
-      <option value="master's degree">Master's Degree</option>
-      <option value="associate's degree">Associate's Degree</option>
-      <option value="high school">High School</option>
-      <option value="some high school">Some High School</option>
-    </select>
+          <div class="field">
+            <label for="education">Parental Level of Education</label>
+            <select id="education">
+              <option value="some high school">Some High School</option>
+              <option value="high school">High School</option>
+              <option value="some college" selected>Some College</option>
+              <option value="associate's degree">Associate's Degree</option>
+              <option value="bachelor's degree">Bachelor's Degree</option>
+              <option value="master's degree">Master's Degree</option>
+            </select>
+          </div>
 
-    <label>Lunch</label>
-    <select id="lunch">
-      <option value="standard">Standard</option>
-      <option value="free/reduced">Free / Reduced</option>
-    </select>
+          <div class="field">
+            <label for="lunch">Lunch</label>
+            <select id="lunch">
+              <option value="standard" selected>Standard</option>
+              <option value="free/reduced">Free / Reduced</option>
+            </select>
+          </div>
 
-    <label>Test Preparation Course</label>
-    <select id="prep">
-      <option value="none">None</option>
-      <option value="completed">Completed</option>
-    </select>
+          <div class="field">
+            <label for="prep">Test Preparation Course</label>
+            <select id="prep">
+              <option value="none" selected>None</option>
+              <option value="completed">Completed</option>
+            </select>
+          </div>
+        </div>
 
-    <button onclick="predict()">Predict</button>
+        <div class="actions">
+          <button class="btn" onclick="predict()" id="predictBtn">
+            <span class="dot"></span>
+            Predict
+          </button>
+          <button class="btn ghost" onclick="resetForm()">Reset</button>
+        </div>
+      </section>
 
-    <div id="result"></div>
+      <section class="card resultCard">
+        <h2>Prediction Result</h2>
+        <p class="muted">The predicted output will appear here.</p>
+
+        <div id="result" class="resultBox">
+          <div class="placeholder">
+            <div class="big">—</div>
+            <div>Waiting for prediction…</div>
+          </div>
+        </div>
+
+        <div class="note">
+          <strong>Note:</strong> This is a predictive model based on patterns from historical data.
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© 2026 Student Performance Prediction System</span>
+      <span class="sep">•</span>
+      <span>Group Project</span>
+    </footer>
   </div>
 
   <script src="script.js"></script>
