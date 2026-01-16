@@ -16,7 +16,6 @@ def predict():
 
     required_fields = [
         "gender",
-        "race/ethnicity",
         "parental level of education",
         "lunch",
         "test preparation course"
